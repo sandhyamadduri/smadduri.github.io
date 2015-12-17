@@ -1,0 +1,59 @@
+html {
+    font-family: 'avenir', 'helvetica', 'sans-serif';
+}
+body {
+    background: white;
+    margin: 0;
+}
+
+header {
+    background:black;
+    color:white;
+
+    /* positioning at top of browser window all the time */
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+}
+
+.list-reset {
+    list-style: none;
+    margin:0;
+    padding:0;
+
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+nav h1 {
+    float:left;
+    margin: 0.5em;
+}
+
+nav ul li a {
+    display: block;
+    padding:1em;
+    color: white;
+    text-decoration: none;
+    /**/
+    transition: all 500ms;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: black;
+}
+
+figure img {
+    padding: 10em;
+    width: 75%;
+    padding-top: 12em;
+    padding-bottom: 12em;
+
+}

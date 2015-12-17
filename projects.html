@@ -1,0 +1,104 @@
+<html>
+
+    <head>
+        <title>Cheesecake Design</title>
+        <link href="projects.css" type="text/css" rel="stylesheet"/>
+        <link href="grid.css" type="text/css" rel="stylesheet"/>
+        <link href="mobile-menu.css" type="text/css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+        <!-- header area -->
+        <header>
+            <nav>
+                <h1><a href="index.html">CHEESECAKE DESIGN</a></h1>
+                <ul class="list-reset">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <button class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+<main>
+
+
+
+      <div class="container">
+        <div id="behance-magix" class="clearfix">
+          <!-- insert some HTML via magic JS -->
+
+          <!-- this is the template that each behance thing with use to print to the browser -->
+          <script id="behance-project" type="text/template">
+            {{#projects}}
+            <div class="project" data-project-id="{{id}}">
+              <a href="{{url}}">
+                <img src="{{covers.404}}" alt="{{name}}" />
+                <ul class="info clearfix list-reset">
+                  <li class="name"><h2>{{name}}</h2></li>
+                </ul>
+              </a>
+            </div>
+
+            {{/projects}}
+          </script>
+                </div>
+          <footer>&copy; 2015 Cheesecake Design</footer>
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- this is jquery, needed for a bunch of stuff -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- this is mustache, required for the templating to happen -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+
+    <script>
+      var userName = 'cheesecakebysandhya'
+      var apiKey   = 'rPEEVbks6MeA8fErRm6S8OKKbSMi3HEg'
+      var url = 'https://www.behance.net/v2/users/' + userName + '/projects/?api_key=' + apiKey +'&callback=?';
+
+      $.getJSON(url, function(data) {
+        console.log('connected to ' + url + '.');
+        //mustache for projects
+        var template = $('#behance-project').html();
+        var info = Mustache.to_html(template, data);
+        $('#behance-magix').html(info);
+      });
+    </script>
+
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('button.toggle').click(function() {
+                    $('header nav ul').slideToggle();
+                });
+            });
+
+            $(window).resize(function() {
+                ww = $(window).width();
+                if (ww > 800) {
+                $('header ul').show();
+            } else {
+                $('header ul').hide();
+                };
+
+            });
+
+
+        </script>
+
+  </body>
+</html>

@@ -1,0 +1,105 @@
+
+
+html {
+    font-family: 'avenir', 'helvetica', 'sans-serif';
+}
+body {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header {
+    background:black;
+    color:white;
+
+    /* positioning at top of browser window all the time */
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index: 99999999;
+}
+
+.list-reset {
+    list-style: none;
+    margin:0;
+    padding:0;
+
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+nav h1 {
+    float:left;
+    margin: 0.5em;
+}
+
+nav ul li a {
+    display: block;
+    padding:1em;
+    color: white;
+    text-decoration: none;
+    /**/
+    transition: all 500ms;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: black;
+
+}
+
+a:visited{
+  color:inherit;
+}
+
+a:link {
+    text-decoration: none;
+}
+h2 {
+    font-size: 1em;
+
+}
+
+footer {
+    clear:both;
+margin-left: auto;
+    margin-right: auto;
+    padding-top:3em;
+}
+
+
+
+
+.container {
+    width:80%;
+    padding:5em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 3em;
+}
+
+.project {
+    padding-right:2em;
+}
+
+@media (min-width:768px) {
+    .project {
+        box-sizing: border-box;
+        float:left;
+        padding-right: 2em;
+        width: 33.3333%
+}
+
+
+    .clearfix {
+        overflow: hidden;
+    }
+}

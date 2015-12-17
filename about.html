@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>
+    About Cheesecake
+    </title>
+    <link href="about.css" type="text/css" rel="stylesheet"/>
+    <link href="mobile-menu.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1><a href="index.html">CHEESECAKE DESIGN</a></h1>
+                <ul class="list-reset">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <button class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <figure>
+            <img src="cheesecake%20logo.png">
+        </figure>
+        <p>Cheesecake Design is a Hyderabad, India based design firm. It was founded in 2014 by Sandhya Madduri, a graduate of NIFT, New Delhi. Cheesecake Design's expertise lies in simple and effective design solutions across print and web media.</p>
+         <footer>&copy; 2015 Cheesecake Design</footer>
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('button.toggle').click(function() {
+                    $('header nav ul').slideToggle();
+                });
+            });
+
+            $(window).resize(function() {
+                ww = $(window).width();
+                if (ww > 800) {
+                $('header ul').show();
+            } else {
+                $('header ul').hide();
+                };
+
+            });
+
+
+        </script>
+
+
+    </body>
+
+
+</html>
